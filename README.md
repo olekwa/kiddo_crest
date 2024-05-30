@@ -1,4 +1,4 @@
-ummary: Tell-A-Story
+Summary: Tell-A-Story
 
 Team Members:
  Eniola Olugbaike
