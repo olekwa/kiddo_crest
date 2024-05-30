@@ -57,9 +57,6 @@ class UserProfileEdit(generics.RetrieveUpdateDestroyAPIView):
         instance = self.get_object()
         self.perform_destroy(instance)
         return Response({"message": "Profile has been deleted."}, status=status.HTTP_204_NO_CONTENT)
-    
-
-   
 
 
 # Class based view to register user
@@ -86,7 +83,6 @@ class LogoutView(APIView):
         return Response({"message": "Successfully logged out."})
 
 
-
 # Views for Books
 class BookList(generics.ListCreateAPIView):
     """
@@ -103,6 +99,21 @@ class BookList(generics.ListCreateAPIView):
     def get_queryset(self):
         # Retrieve only the books associated with the currently authenticated user
         return Book.objects.filter(user=self.request.user)
+
+
+class AllBooks(generics.ListCreateAPIView):
+    """
+    Retrieves all books from database
+    """
+    queryset = Book.objects.all()
+    serializer_class = BookSerializer
+    permission_classes = (AllowAny,)
+
+    def get_all(self):
+        """
+        Retrieves and returns all books in db
+        """
+        return Book.objects
 
 class BookDetail(generics.RetrieveUpdateDestroyAPIView):
     """
