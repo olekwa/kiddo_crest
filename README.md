@@ -1,10 +1,10 @@
 Summary: Tell-A-Story
 
 Team Members:
- Eniola Olugbaike
- Mitchell Kalenda
- Mary Bakare
- John Olekwa
+ Eniola Olugbaike - Backend Developer
+ Mitchell Kalenda - Backend Developer
+ Mary Bakare     - Frontend Developer
+ John Olekwa    -  Frontend Developer
 
 Overview:
 Tell-A-Story is an online platform designed to make reading enjoyable and accessible for children. The platform offers a diverse collection of children's storybooks that can be read online or listened to via audio narration.
