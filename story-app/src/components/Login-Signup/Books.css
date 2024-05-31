@@ -1,0 +1,113 @@
+.books-container {
+  display: flex;
+  margin: 20px;
+  flex-wrap: wrap;
+}
+.categories-column {
+  flex: 1;
+  border-right: 1px solid #ccc;
+  padding: 20px;
+  max-width: 200px;
+  overflow-y: auto;
+}
+.books-column {
+  flex: 3;
+  padding: 20px;
+}
+.categories-list {
+  list-style: none;
+  padding: 0;
+}
+.categories-list li {
+  cursor: pointer;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+.categories-list li:hover {
+  background-color: #f0f0f0;
+}
+.book-card {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.book-cover {
+  max-width: 100px;
+  margin-right: 10px;
+}
+.book-info {
+  flex: 1;
+}
+pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.pagination button {
+  margin: 0 5px;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+.pagination button.active {
+  font-weight: bold;
+  border-bottom: 2px solid #000;
+}
+
+.category {
+  margin-bottom: 20px;
+}
+.books-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1 fr));
+
+  gap: 20px;
+}
+.book-item {
+  border: 1px solid #ddd;
+  padding: 20px;
+  width: calc(100% / 3 -40px);
+  text-align: center;
+}
+.book-item img {
+  width: 100%;
+  height: auto;
+}
+.book-item h4 {
+  margin: 0;
+}
+.book-item button {
+  margin-top: 10px;
+  padding: 10px;
+
+  /* padding: 0.5rem; */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.book-item button:hover {
+  background-color: #0056b3;
+}
+@media (max-width: 1200px) {
+  .books-column {
+    flex: 2;
+  }
+  .book-item {
+    width: calc(50% -40px);
+  }
+}
+@media (max-width: 768px) {
+  .books-container {
+    flex-direction: column;
+  }
+  .categories-column {
+    padding: 10px;
+  }
+  .books-column {
+    padding: 10px;
+  }
+}
